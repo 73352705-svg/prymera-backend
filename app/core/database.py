@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-DATABASE_URL = "postgresql://postgres:postgres@localhost:5432/bd_core_mobile"
+DATABASE_URL = "postgresql://neondb_owner:npg_Dpwfkg5iIG7a@ep-dry-cell-atlyph0q-pooler.c-9.us-east-1.aws.neon.tech/db_core_mobile?sslmode=require"
 
 engine = create_engine(DATABASE_URL, pool_pre_ping=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
