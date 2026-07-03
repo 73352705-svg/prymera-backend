@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.routers import (
     auth, cartera, clientes, solicitudes, preevaluacion, buro,
-    cobranza, alertas, campanas, reportes, cliente_app, notificaciones,
+    cobranza, alertas, campanas, reportes, cliente_app, notificaciones, supervisor,
 )
 
 app = FastAPI(
@@ -32,6 +32,7 @@ app.include_router(campanas.router)
 app.include_router(reportes.router)
 app.include_router(cliente_app.router)
 app.include_router(notificaciones.router)
+app.include_router(supervisor.router)
 
 
 @app.get("/health")
